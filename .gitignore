@@ -2,6 +2,9 @@
 # Ignores all files in the node_modules directory
 node_modules/
 
+# Ignores all database files
+collection.db
+
 # Expo
 .expo/
 dist/
