@@ -57,6 +57,23 @@ app.get('/api/games', (req, res) => {
     });
 });
 
+// Posts a new game to the db
+app.post('/api/games', (req, res) => {
+    const { title, platform, genre, hours_played, completed } = req.body;
+    const query = `
+        INSERT INTO games (title, platform, genre, hours_played, completed) 
+        VALUES (?, ?, ?, ?, ?)`;
+    
+    db.run(query, [title, platform, genre, hours_played, completed], function(err) {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        res.json({ status: 'CREATE ENTRY SUCCESFUL', id: this.lastID });
+    });
+});
+
+
 // Starts the express server on the port
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
