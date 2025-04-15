@@ -46,6 +46,17 @@ db.run(`
 
 // API Endpoints (Routes)
 
+// Endpoint for getting all games from the db
+app.get('/api/games', (req, res) => {
+    db.all("SELECT * FROM games", [], (err, rows) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        res.json(rows);
+    });
+});
+
 // Starts the express server on the port
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
