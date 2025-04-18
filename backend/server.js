@@ -3,8 +3,21 @@
  * @file server.js
  * @author Brendan Dileo, April 2025
  * 
- * Setup for the Express server and SQLite database.
+ * This file sets up the Node.js Express backend server and SQLite database for the 
+ * game collection app. It provides RESTful API routes to interact with the database,
+ * allowing users to create, retrieve, update, and delete game entries. The API supports
+ * both single game operations like creating or deleting a single game, and bulk operations
+ * like deleting an entire collection.
+ * 
+ * StAuth10244: I Brendan Dileo, 000879513 certify that this material is my original work.
+ * No other person's work has been used without due acknowledgement. I have not made my work available to anyone else.
  */
+
+
+
+
+
+
 
 // Express for creating the server and handling requests
 const express = require('express');
