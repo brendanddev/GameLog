@@ -128,6 +128,46 @@ app.get('/api/:id', (req, res) => {
     });
 });
 
+// Updates a game by ID (PUT)
+app.put('/api/:id', (req, res) => {
+    const id = req.params.id;
+    const { title, platform, genre, hours_played, completed } = req.body;
+    
+    const query = `
+        UPDATE games 
+        SET title = ?, platform = ?, genre = ?, hours_played = ?, completed = ? 
+        WHERE id = ?`;
+    
+    db.run(query, [title, platform, genre, hours_played, completed, id], function(err) {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        if (this.changes === 0) {
+            res.status(404).json({ error: "Game not found" });
+            return;
+        }
+        res.json({ status: 'UPDATE GAME ENTRY SUCCESFUL' });
+    });
+});
+
+// Deletes a game from the db by ID (DELETE)
+app.delete('/api/:id', (req, res) => {
+    const id = req.params.id;
+    
+    db.run("DELETE FROM games WHERE id = ?", [id], function(err) {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        if (this.changes === 0) {
+            res.status(404).json({ error: "Game not found" });
+            return;
+        }
+        res.json({ status: 'DELETE GAME ENTRY SUCCESFUL' });
+    });
+});
+
 // Starts the express server on the port
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
