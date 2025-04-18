@@ -46,8 +46,8 @@ db.run(`
 
 // API Endpoints (Routes)
 
-// Endpoint for getting all games from the db
-app.get('/api/games', (req, res) => {
+// Retreives all games from the db (GET)
+app.get('/api', (req, res) => {
     db.all("SELECT * FROM games", [], (err, rows) => {
         if (err) {
             res.status(500).json({ error: err.message });
@@ -57,8 +57,8 @@ app.get('/api/games', (req, res) => {
     });
 });
 
-// Posts a new game to the db
-app.post('/api/games', (req, res) => {
+// Adds a new game to the database (POST)
+app.post('/api', (req, res) => {
     const { title, platform, genre, hours_played, completed } = req.body;
     const query = `
         INSERT INTO games (title, platform, genre, hours_played, completed) 
@@ -73,6 +73,60 @@ app.post('/api/games', (req, res) => {
     });
 });
 
+// Replaces the entire game collection (PUT)
+app.put('/api', (req, res) => {
+    const newGames = req.body;
+
+    db.serialize(() => {
+        db.run("DELETE FROM games", [], (err) => {
+            if (err) {
+                res.status(500).json({ error: err.message });
+                return;
+            }
+
+            const stmt = db.prepare("INSERT INTO games (title, platform, genre, hours_played, completed) VALUES (?, ?, ?, ?, ?)");
+            newGames.forEach(game => {
+                stmt.run(game.title, game.platform, game.genre, game.hours_played, game.completed);
+            });
+
+            stmt.finalize((err) => {
+                if (err) {
+                    res.status(500).json({ error: err.message });
+                    return;
+                }
+                res.json({ status: 'UPDATE ENTRY SUCCESFUL' });
+            });
+        });
+    });
+});
+
+// Deletes the entire game collection (DELETE)
+app.delete('/api', (req, res) => {
+    db.run("DELETE FROM games", [], (err) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        res.json({ status: 'DELETE ALL GAME ENTRIES SUCCESFUL' });
+    });
+});
+
+// Gets a specific game by ID (GET)
+app.get('/api/:id', (req, res) => {
+    const id = req.params.id;
+    db.get("SELECT * FROM games WHERE id = ?", [id], (err, row) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+
+        if (!row) {
+            res.status(404).json({ error: "Game not found" });
+            return;
+        }
+        res.json(row);
+    });
+});
 
 // Starts the express server on the port
 app.listen(port, () => {
