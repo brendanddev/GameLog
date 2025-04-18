@@ -1,4 +1,3 @@
-
 /**
  * @file HomeScreen.js
  * @author Brendan Dileo - April 2025
@@ -79,20 +78,24 @@ const HomeScreen = () => {
                         </View>
                     </View>
 
-                    {/* Quick action buttons for adding or deleting games, not used right now */}
+                    {/* Quick Actions Section */}
                     <View style={styles.quickActionsSection}>
                         <Text style={styles.sectionHeading}>Quick Actions</Text>
-                        <View style={styles.actionButtonsContainer}>
-                            <TouchableOpacity 
-                                style={[styles.actionButton, styles.leftActionButton]}
-                            >
-                                <Text style={styles.actionButtonText}>Add Game</Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity 
-                                style={[styles.actionButton, styles.rightActionButton]}
-                            >
-                                <Text style={styles.actionButtonText}>Recent</Text>
-                            </TouchableOpacity>
+                        <View style={styles.quickActionsCard}>
+                            <View style={styles.actionButtonsContainer}>
+                                <TouchableOpacity 
+                                    style={[styles.actionButton, styles.leftActionButton]}
+                                    onPress={() => navigation.navigate('AddGame')}
+                                >
+                                    <Text style={styles.actionButtonText}>Add Game</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity 
+                                    style={[styles.actionButton, styles.rightActionButton]}
+                                    onPress={() => navigation.navigate('RecentGames')}
+                                >
+                                    <Text style={styles.actionButtonText}>Recent Games</Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
                     </View>
 

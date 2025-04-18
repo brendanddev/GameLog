@@ -185,21 +185,40 @@ export const styles = StyleSheet.create({
 
     // Section for the quick actions
     quickActionsSection: {
-        marginTop: 10,
+        marginTop: 20,
+    },
+
+    // Card container for quick actions
+    quickActionsCard: {
+        backgroundColor: '#ffffff',
+        borderRadius: 20,
+        padding: 20,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: 3,
+        elevation: 3,
+        position: 'relative',
+        overflow: 'hidden',
     },
 
     // Text for the section heading
     sectionHeading: {
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: '600',
-        color: '#2d3436',
+        color: '#9370db',
         marginBottom: 15,
+        letterSpacing: 0.5,
     },
 
     // Container for the action buttons
     actionButtonsContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        gap: 15,
     },
 
     // Individual action button for adding a game or viewing recent games
@@ -208,24 +227,27 @@ export const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 12,
         alignItems: 'center',
-        marginHorizontal: 5,
+        backgroundColor: 'rgba(147, 112, 219, 0.08)',
     },
 
     // Left action button for adding a game
     leftActionButton: {
-        backgroundColor: 'rgba(147, 112, 219, 0.1)',
+        borderLeftWidth: 4,
+        borderLeftColor: '#9370db',
     },
 
     // Right action button for viewing recent games
     rightActionButton: {
-        backgroundColor: 'rgba(129, 236, 236, 0.1)',
+        borderLeftWidth: 4,
+        borderLeftColor: '#9370db',
     },
 
     // Text for all the action buttons
     actionButtonText: {
         fontSize: 16,
         fontWeight: '500',
-        color: '#2d3436',
+        color: '#9370db',
+        letterSpacing: 0.3,
     },
 
     // Container for the featured games section
@@ -251,25 +273,28 @@ export const styles = StyleSheet.create({
         elevation: 3,
     },
 
-    // Text for the featured games
-    gameName: {
+     // Text for the featured games
+     gameName: {
         fontSize: 18,
         fontWeight: '600',
-        color: '#2d3436',
+        color: '#9370db',
         marginBottom: 8,
+        letterSpacing: 0.5,
     },
 
     // Text for the featured games rating
     gameScore: {
         fontSize: 16,
-        color: '#00b894',
+        color: '#a29bfe',
         marginBottom: 4,
+        letterSpacing: 0.3,
     },
 
     // Text for the featured games category
     gameCategory: {
         fontSize: 14,
         color: '#636e72',
+        letterSpacing: 0.3,
     },
 
 }); 
