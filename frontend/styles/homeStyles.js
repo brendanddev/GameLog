@@ -25,6 +25,7 @@ export const styles = StyleSheet.create({
     // Makes the home screen scrollable
     scrollableContent: {
         flex: 1,
+        
     },
 
     // Header for the home screen
@@ -37,11 +38,11 @@ export const styles = StyleSheet.create({
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 4,
         },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-        elevation: 3,
+        shadowOpacity: 0.15,
+        shadowRadius: 8,
+        elevation: 8,
         position: 'relative',
         overflow: 'hidden',
     },
@@ -60,7 +61,7 @@ export const styles = StyleSheet.create({
         width: 200,
         height: 200,
         borderRadius: 100,
-        backgroundColor: 'rgba(147, 112, 219, 0.08)',
+        backgroundColor: 'rgba(100, 100, 100, 0.08)',
         transform: [{ scale: 1.2 }],
     },
 
@@ -81,6 +82,14 @@ export const styles = StyleSheet.create({
     // Section for the main content of the home screen
     mainContent: {
         padding: 20,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 1,
+            height: 4,
+        },
+        shadowOpacity: 0.3,
+        shadowRadius: 2,
+        elevation: 8,
     },
 
     // Container for the collection card
@@ -91,11 +100,11 @@ export const styles = StyleSheet.create({
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 6,
         },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-        elevation: 3,
+        shadowOpacity: 0.2,
+        shadowRadius: 10,
+        elevation: 10,
         overflow: 'hidden',
         position: 'relative',
     },
@@ -114,7 +123,7 @@ export const styles = StyleSheet.create({
         right: 0,
         width: 100,
         height: 100,
-        backgroundColor: 'rgba(147, 112, 219, 0.1)',
+        backgroundColor: 'rgba(100, 100, 100, 0.1)',
         borderTopLeftRadius: 50,
     },
 
@@ -150,23 +159,23 @@ export const styles = StyleSheet.create({
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 4,
         },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-        elevation: 3,
+        shadowOpacity: 0.15,
+        shadowRadius: 8,
+        elevation: 8,
     },
 
     // Left card box
     leftStatBox: {
         borderLeftWidth: 4,
-        borderLeftColor: '#a29bfe',
+        borderLeftColor: '#9370db',
     },
 
     // Right card box
     rightStatBox: {
         borderLeftWidth: 4,
-        borderLeftColor: '#81ecec',
+        borderLeftColor: '#9370db',
     },
 
     // Text for the number of games and games completed
@@ -185,7 +194,7 @@ export const styles = StyleSheet.create({
 
     // Section for the quick actions
     quickActionsSection: {
-        marginTop: 20,
+        marginTop: 10,
     },
 
     // Card container for quick actions
@@ -196,11 +205,11 @@ export const styles = StyleSheet.create({
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 6,
         },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-        elevation: 3,
+        shadowOpacity: 0.2,
+        shadowRadius: 10,
+        elevation: 10,
         position: 'relative',
         overflow: 'hidden',
     },
@@ -209,7 +218,7 @@ export const styles = StyleSheet.create({
     sectionHeading: {
         fontSize: 20,
         fontWeight: '600',
-        color: '#9370db',
+        color: '#2d3436',
         marginBottom: 15,
         letterSpacing: 0.5,
     },
@@ -227,7 +236,15 @@ export const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 12,
         alignItems: 'center',
-        backgroundColor: 'rgba(147, 112, 219, 0.08)',
+        backgroundColor: 'rgba(100, 100, 100, 0.08)',
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 4,
     },
 
     // Left action button for adding a game
@@ -246,7 +263,7 @@ export const styles = StyleSheet.create({
     actionButtonText: {
         fontSize: 16,
         fontWeight: '500',
-        color: '#9370db',
+        color: '#2d3436',
         letterSpacing: 0.3,
     },
 
@@ -266,18 +283,18 @@ export const styles = StyleSheet.create({
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 4,
         },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-        elevation: 3,
+        shadowOpacity: 0.15,
+        shadowRadius: 8,
+        elevation: 8,
     },
 
      // Text for the featured games
      gameName: {
         fontSize: 18,
         fontWeight: '600',
-        color: '#9370db',
+        color: '#2d3436',
         marginBottom: 8,
         letterSpacing: 0.5,
     },
@@ -285,7 +302,7 @@ export const styles = StyleSheet.create({
     // Text for the featured games rating
     gameScore: {
         fontSize: 16,
-        color: '#a29bfe',
+        color: '#2d3436',
         marginBottom: 4,
         letterSpacing: 0.3,
     },

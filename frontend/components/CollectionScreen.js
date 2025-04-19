@@ -33,7 +33,7 @@ import api from '../api';
  * @returns {JSX.Element} - The JSX containing the CollectionScreen component.
  */
 const CollectionScreen = () => {
-    // Navigation hook for screen navigation
+    // Hook to navigate to the Home screen
     const navigation = useNavigation();
     
     // Stores the list of games in the users collection

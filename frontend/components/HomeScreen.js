@@ -1,3 +1,4 @@
+
 /**
  * @file HomeScreen.js
  * @author Brendan Dileo - April 2025
@@ -80,8 +81,8 @@ const HomeScreen = () => {
 
                     {/* Quick Actions Section */}
                     <View style={styles.quickActionsSection}>
-                        <Text style={styles.sectionHeading}>Quick Actions</Text>
                         <View style={styles.quickActionsCard}>
+                            <Text style={styles.sectionHeading}>Quick Actions</Text>
                             <View style={styles.actionButtonsContainer}>
                                 <TouchableOpacity 
                                     style={[styles.actionButton, styles.leftActionButton]}
@@ -101,16 +102,18 @@ const HomeScreen = () => {
 
                     {/* Featured games section with horizontal scrolling */}
                     <View style={styles.featuredSection}>
-                        <Text style={styles.sectionHeading}>Featured Games</Text>
-                        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                            {featuredGames.map((game) => (
-                                <TouchableOpacity key={game.id} style={styles.featuredGameCard}>
-                                    <Text style={styles.gameName}>{game.title}</Text>
-                                    <Text style={styles.gameScore}>{game.rating}</Text>
-                                    <Text style={styles.gameCategory}>{game.genre}</Text>
-                                </TouchableOpacity>
-                            ))}
-                        </ScrollView>
+                        <View style={styles.quickActionsCard}>
+                            <Text style={styles.sectionHeading}>Featured Games</Text>
+                            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                                {featuredGames.map((game) => (
+                                    <TouchableOpacity key={game.id} style={styles.featuredGameCard}>
+                                        <Text style={styles.gameName}>{game.title}</Text>
+                                        <Text style={styles.gameScore}>{game.rating}</Text>
+                                        <Text style={styles.gameCategory}>{game.genre}</Text>
+                                    </TouchableOpacity>
+                                ))}
+                            </ScrollView>
+                        </View>
                     </View>
                 </View>
             </ScrollView>
