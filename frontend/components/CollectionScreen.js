@@ -341,9 +341,9 @@ const CollectionScreen = () => {
                     <Text style={collectionStyles.inputLabel}>Status</Text>
                     <View style={collectionStyles.statusContainer}>
                         {/* Creates the status buttons for the user to select from */}
-                        {['Not Started', 'In Progress', 'Completed'].map((status) => (
+                        {['Not Started', 'In Progress', 'Completed'].map((status, index) => (
                             <TouchableOpacity
-                                key={status}
+                                key={index}
                                 style={[
                                     collectionStyles.statusButton,
                                     newGame.status === status && collectionStyles.statusButtonActive
@@ -433,9 +433,9 @@ const CollectionScreen = () => {
                     
                     <Text style={collectionStyles.inputLabel}>Status</Text>
                     <View style={collectionStyles.statusContainer}>
-                        {['Not Started', 'In Progress', 'Completed'].map((status) => (
+                        {['Not Started', 'In Progress', 'Completed'].map((status, index) => (
                             <TouchableOpacity
-                                key={status}
+                                key={index}
                                 style={[
                                     collectionStyles.statusButton,
                                     currentGame?.status === status && collectionStyles.statusButtonActive

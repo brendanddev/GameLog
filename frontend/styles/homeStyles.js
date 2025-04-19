@@ -1,4 +1,3 @@
-
 /**
  * @file homeStyles.js
  * @author Brendan Dileo - April 2025
@@ -25,7 +24,6 @@ export const styles = StyleSheet.create({
     // Makes the home screen scrollable
     scrollableContent: {
         flex: 1,
-        
     },
 
     // Header for the home screen
@@ -61,7 +59,7 @@ export const styles = StyleSheet.create({
         width: 200,
         height: 200,
         borderRadius: 100,
-        backgroundColor: 'rgba(100, 100, 100, 0.08)',
+        backgroundColor: 'rgba(147, 112, 219, 0.08)',
         transform: [{ scale: 1.2 }],
     },
 
@@ -123,7 +121,7 @@ export const styles = StyleSheet.create({
         right: 0,
         width: 100,
         height: 100,
-        backgroundColor: 'rgba(100, 100, 100, 0.1)',
+        backgroundColor: 'rgba(147, 112, 219, 0.1)',
         borderTopLeftRadius: 50,
     },
 
@@ -236,7 +234,7 @@ export const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 12,
         alignItems: 'center',
-        backgroundColor: 'rgba(100, 100, 100, 0.08)',
+        backgroundColor: 'rgba(147, 112, 219, 0.08)',
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
@@ -280,6 +278,8 @@ export const styles = StyleSheet.create({
         padding: 15,
         marginRight: 15,
         width: 200,
+        borderColor: '#9370db',
+        borderWidth: 0.5,
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
