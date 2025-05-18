@@ -11,6 +11,24 @@ GameLog is a full-stack application for managing a personal video game collectio
 - Local SQLIte database for data persistence
 - RESTful API architecture
 
+## Tech Stack
+### Frontend
+- React Native
+- Expo
+- React Navigation & Gesture Handler
+- Axios
+
+### Backend
+- Node.js
+- Express
+- SQLite3
+
+## Prerequisites
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- Expo CLI
+- iOS Simulator
+
 
 ## Installation
 
