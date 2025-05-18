@@ -32,6 +32,46 @@ GameLog is a full-stack application for managing a personal video game collectio
 
 ## Installation
 
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/GameLog.git
+cd GameLog
+```
+
+2. Install frontend and backend dependencies
+```bash
+cd backend
+npm install
+
+cd ../frontend
+npm install
+```
+
+3. Configure the frontend
+- Update `config.js` file in the frontend directory with your local IP address
+```js
+const config = {
+    API_URL: 'http://<your-ip>:3001',
+};
+```
+
+## Running the Application
+1. Start the backend server:
+```bash
+cd backend
+npm start (node server.js)
+```
+
+2. Start the frontend application:
+```bash
+cd frontend
+npm start
+```
+
+3. Use Expo to run the application:
+- Press 'i' 
+
+
 Run the following commands in both the `backend` and `frontend` folders.
 
 Use the package manager [npm](https://www.npmjs.com/).
