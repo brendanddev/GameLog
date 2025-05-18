@@ -48,7 +48,7 @@ npm install
 ```
 
 3. Configure the frontend
-- Update `config.js` file in the frontend directory with your local IP address
+> ⚠️ **Important:** You may need to update the IP address in `config.js` to your own IP to ensure the Axios connection to the backend works correctly.
 ```js
 const config = {
     API_URL: 'http://<your-ip>:3001',
@@ -69,26 +69,27 @@ npm start
 ```
 
 3. Use Expo to run the application:
-- Press 'i' 
+- Press 'i' to run on iOS simulator
+- Press 'a' to run on Android emulator
+- Scan QR code with Expo Go app on your physical device
 
+## API Endpoints
+- `GET /api` - Retrieve all games
+- `POST /api` - Add a new game
+- `PUT /api` - Update entire collection
+- `DELETE /api` - Delete all games
+- `GET /api/:id` - Get single game
+- `PUT /api/:id` - Update single game
+- `DELETE /api/:id` - Delete single game
 
-Run the following commands in both the `backend` and `frontend` folders.
-
-Use the package manager [npm](https://www.npmjs.com/).
-
-```bash
-npm install
-npm start
-```
-
-> ⚠️ **Important:** You may need to update the IP address in `config.js` to your own IP to ensure the Axios connection to the backend works correctly.
-
-```js
-const config = {
-    API_URL: 'http://<your-ip>:3001', // Replace <your-ip> with your local or server IP address
-};
-```
+## Author
+Brendan Dileo
 
 ## Acknowledgements
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [Express.js](https://expressjs.com/)
+- [SQLite](https://www.sqlite.org/)
+- [React Navigation](https://reactnavigation.org/)
 - [React Modal](https://reactnative.dev/docs/modal)
 - [React RefreshControl](https://reactnative.dev/docs/refreshcontrol)
