@@ -1,5 +1,16 @@
 # GameLog
 
+## Overview
+GameLog is a full-stack application for managing a personal video game collection. It allows users to track their games, including details like platform, genre, hours played, and completion status. Built with React Native and Node.js, Gamelog provides a modern, mobile-first interface for managing your gaming library.
+
+## Features
+- Mobile-first design with React Native
+- Track Game details (title, platform, genre, hours played, etc)
+- Real-time updates and synchronization
+- Simple and intuitive user interface
+- Local SQLIte database for data persistence
+- RESTful API architecture
+
 
 ## Installation
 
